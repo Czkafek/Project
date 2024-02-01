@@ -1,6 +1,7 @@
 What the project will have inside:
 
   Subpages: 
+  
     - Shop
     - Forum
     - Free resources
