@@ -10,6 +10,7 @@ What the project will have inside:
     - News
 
   Features:
+  
     - Newsletter
     - Dark/light mode
     - Responsive Design
