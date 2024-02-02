@@ -1,6 +1,7 @@
 What the project will have inside:
 
-  Subpages:
+  Subpages: 
+  
     - Shop
     - Forum
     - Free resources
@@ -9,6 +10,7 @@ What the project will have inside:
     - News
 
   Features:
+  
     - Newsletter
     - Dark/light mode
     - Responsive Design
