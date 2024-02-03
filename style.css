@@ -1,8 +1,5 @@
 body{
-    background-color: black;
-    background-image: url(Images/Tlo2.png);
-    background-repeat: no-repeat;
-    background-size:cover;
+    background-color: rgb(34, 33, 33) !important;
 }
 .linki{
     text-decoration: none;
