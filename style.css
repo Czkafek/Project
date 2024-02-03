@@ -1,0 +1,11 @@
+body{
+    background-color: black;
+}
+.linki{
+    text-decoration: none;
+    opacity: 85%;
+    font-weight: bold;
+}
+.linki:hover{
+    opacity: 100%;
+}
