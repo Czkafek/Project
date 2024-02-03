@@ -3,9 +3,12 @@ body{
 }
 .linki{
     text-decoration: none;
-    opacity: 85%;
+    opacity: 80%;
     font-weight: bold;
+    transition: color 1s,background-color 1s, opacity 1s;
 }
 .linki:hover{
     opacity: 100%;
+    background-color: white;
+    color: black !important;
 }
