@@ -1,5 +1,8 @@
 body{
     background-color: black;
+    background-image: url(Images/Tlo2.png);
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 .linki{
     text-decoration: none;
@@ -11,4 +14,9 @@ body{
     opacity: 100%;
     background-color: white;
     color: black !important;
+}
+
+.newsy_glowne{
+    background-repeat: no-repeat;
+    background-size: cover;
 }
