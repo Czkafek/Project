@@ -16,3 +16,13 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.linki2{
+    color: whitesmoke;
+    text-decoration: none;
+    opacity: 80%;
+    font-weight: bold;
+    transition: opacity 0.4s;
+}
+.linki2:hover{
+    opacity: 100%;
+}

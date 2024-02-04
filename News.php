@@ -130,3 +130,6 @@ echo'</div>';
 </body>
 </html>
 
+<?php 
+include('footer.html');
+?>
