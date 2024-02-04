@@ -12,20 +12,27 @@ include('header.html');
 <body style="height: 100vh; width: 100vw;">
 <div class="container">
 <div class="row row-cols-1 row-cols-lg-3 g-4 mx-auto my-5">
+  <?php
+    for ($i=0; $i<3; $i++){
+    echo '<div class="col">';
+    echo  '<a href="" style="text-decoration: none;">';
+    echo '<div class="card h-100 border-0">';
+    echo'<img src="Images/coding-man.jpg" class="card-img-top" alt="...">';
+    echo  '<div class="card-body">';
+    echo'    <h5 class="card-title">Card title</h5>';
+    echo'    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>';
+    echo '</div>';
+    echo  '<div class="card-footer">';
+    echo'    <small class="text-body-secondary">Last updated 3 mins ago</small>';
+    echo'  </div>';
+    echo'</div>';
+    echo'</a>';
+    echo'</div>';
+    }
+  ?>
+  <!--
   <div class="col">
-    <div class="card h-100">
-      <img src="Images/coding-man.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
+    <div class="card h-100 border-0">
       <img src="Images/Tlo2.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
@@ -36,18 +43,7 @@ include('header.html');
       </div>
     </div>
   </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="Images/pomalowane-na-szaro-gladkie-teksturowane-tlo.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
-      </div>
-      <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
+-->
 </div>
 
 
@@ -61,6 +57,7 @@ include('header.html');
       </div>
     </div>
   </div>
+
   <div class="col">
     <div class="card">
       <img src="Images/coding-man.jpg" class="card-img-top" alt="...">
@@ -96,98 +93,39 @@ include('header.html');
     </div>
   </div>
 </div>
+<?php
+for ($i=0;$i<5;$i++){
+echo'<div class="card mb-3 my-3 mx-3" style="max-width: 540px;">';
+echo'  <div class="row g-0">';
+echo'    <div class="col-4">';
+echo'      <img src="Images/coding-man.jpg" class="img-fluid rounded-start" alt="...">';
+echo'    </div>';
+echo'    <div class="col-8">';
+echo'      <div class="card-body">';
+echo'        <h5 class="card-title">Card title</h5>';
+echo'        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>';
+echo'      </div>';
+echo'    </div>';
+echo'  </div>';
+echo'</div>';
+}
+?>
+<!--
+<div class="card mb-3 my-3 mx-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-4">
+      <img src="Images/coding-man.jpg" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+</div>
+-->
 
-<div class="card mb-3 my-3 mx-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-4">
-      <img src="Images/coding-man.jpg" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="card mb-3 my-3 mx-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-4">
-      <img src="Images/coding-man.jpg" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="card mb-3 my-3 mx-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-4">
-      <img src="Images/coding-man.jpg" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="card mb-3 my-3 mx-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-4">
-      <img src="Images/coding-man.jpg" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="card mb-3 my-3 mx-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-4">
-      <img src="Images/coding-man.jpg" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="card mb-3 my-3 mx-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-4">
-      <img src="Images/coding-man.jpg" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="card mb-3 my-3 mx-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-4">
-      <img src="Images/coding-man.jpg" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
 </div>
 </body>
 </html>

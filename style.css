@@ -5,12 +5,11 @@ body{
     text-decoration: none;
     opacity: 80%;
     font-weight: bold;
-    transition: color 1s,background-color 1s, opacity 1s;
+    transition: background-color 0.4s, opacity 0.4s;
 }
 .linki:hover{
     opacity: 100%;
-    background-color: white;
-    color: black !important;
+    background-color: #1E1E1E;
 }
 
 .newsy_glowne{
