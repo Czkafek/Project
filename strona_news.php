@@ -15,7 +15,8 @@
     $query = "SELECT * FROM `News` ORDER BY `DateTime` DESC LIMIT $news,$news_k ;";
     $result = mysqli_query($conn,$query);
     $row = mysqli_fetch_assoc($result);
-    echo $row['Title'];
+    echo $row['Title'].'<br>';
+    echo $row['Content'];
 
 
     // echo $_GET['news'].'<br>';
