@@ -8,6 +8,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        a{text-decoration: none !important; }
+    </style>
 </head>
 <body class="text-light">
     <?php
@@ -15,33 +18,20 @@
     $news_k = $news+1;
     $query = "SELECT * FROM `News` ORDER BY `DateTime` DESC LIMIT $news,$news_k ;";
     $result = mysqli_query($conn,$query);
-    $row = mysqli_fetch_assoc($result);
-    //echo $row['Title'].'<br>';
-    //echo $row['Content'];
-
-
-    // echo $_GET['news'].'<br>';
-    // echo time().'<br>';
-    // $data = New DateTime();
-    // var_dump($data);
-    // echo $data->format('m/d/Y');?>
-    <div class="row sticky-top float-end d-none d-lg-block my-3 w-25">
-    <div class="col">
-        <h3 class="text-light" style="padding: 0%; margin: 0%;">Na czasie</h3>
-        <img class="d-inline" src="Images/Line 1.png">
-        <form class="form-inline my-2">
-        <input class="form-control mr-sm-2" type="email" placeholder="Mail" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Zapisz się</button>
-    </form>
-    </div>
-    </div>
+    $row = mysqli_fetch_assoc($result);?>
     <div class="container">
-    <div class="row">
-        <div class="col-9 mb-5">
+    <div class="row mt-2">
+        <div class="col-12 col-md-9 mb-5">
             <h1><?php echo $row['Title']?></h1>
             <p style="font-weight: lighter;"><?php echo $row['DateTime']?></p>
             <img class="img-fluid" src="<?php echo $row['Image']?>">
             <p><?php echo $row['Content']; ?></p>
+            <h3 class="text-light" style="padding: 0%; margin: 0%;">Na czasie</h3>
+            <img class="d-inline" src="Images/Line 1.png">
+            <form class="my-2">
+            <input class="form-control mr-sm-2 d-inline" type="email" placeholder="Mail" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 d-inline" type="submit">Zapisz się</button>
+            </form>
         </div>
         <div class="row text-center"><h1>Inne Artykuły:</h1></div>
         
@@ -51,7 +41,7 @@
                 $liczba = random_int(0,ilosc_wierszy()-1);
                 $row = get_news($liczba);
               echo '<div class="col">';
-              echo  '<a href="strona_news.php?news='.$i.'">';
+              echo  '<a href="strona_news.php?news='.$liczba.'">';
               echo '<div class="card h-100 border-0">';
               echo'<img src="'.$row['Image'].'" class="card-img-top" alt="...">';
               echo  '<div class="card-body">';

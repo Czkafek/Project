@@ -42,7 +42,7 @@ include_once('database.php')
     echo  '<a href="strona_news.php?news='.$i.'">';
     echo '<div class="card h-100 border-0">';
     echo'<img src="'.$row['Image'].'" class="card-img-top" alt="...">';
-    echo  '<div class="card-body">';
+    echo  '<div class="card-body mt-auto" style="max-height:75px;">';
     echo'    <h5 class="card-title">'.$row['Title'].'</h5>';
     echo'    <p class="card-text">'.$row['Short'].'</p>';
     echo '</div>';
