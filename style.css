@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(34, 33, 33) !important;
+}
+.linki{
+    text-decoration: none;
+    opacity: 80%;
+    font-weight: bold;
+    transition: background-color 0.4s, opacity 0.4s;
+}
+.linki:hover{
+    opacity: 100%;
+    background-color: #1E1E1E;
+}
+
+.newsy_glowne{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.linki2{
+    color: whitesmoke;
+    text-decoration: none;
+    opacity: 80%;
+    font-weight: bold;
+    transition: opacity 0.4s;
+}
+.linki2:hover{
+    opacity: 100%;
+}
