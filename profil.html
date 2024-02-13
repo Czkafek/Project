@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+        body {
+            background-color: #1a1a1a;
+            height: 100vh;
+            width: 100vw;
+        }
+        button {
+            background-color: #EB8259;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e1e1e;
+            border-radius: 100px;
+            padding: 5px 15px 5px 15px;
+            margin: 20px 10px 0px 0px;
+            transition: background-color 0.15s;
+        }
+        button:hover {
+            background-color: #eb9979;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container-fluid">
+            <div class="row" style="background-color: #0E0E0E">
+                <div class="col-10 col-md-3 my-auto">
+                    <p style="color: #EB8259; font-size: 30px; text-decoration: none;" class="h1 ms-md-5" href="Newsy.php">ByteHouse</p>
+                </div>
+                <div class="col-2 col-md-3 my-auto d-inline d-md-none">
+                    <img src="images/logo.png" class="float-end img-fluid me-md-5" style="width: 40px;">
+                </div>
+                    <div class="col nav nav-pills nav-fill">
+                        <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center" style="border-radius: 0px;" href="">Nauka</a>
+                        <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center" style="background-color: #1e1e1e; border-radius: 0px;" href="Newsy.php?page=0">News</a>
+                        <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center" style="border-radius: 0px;" href="">Sklep</a>
+                        <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center" style="border-radius: 0px;" href="">Forum</a>
+                        <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center" style="border-radius: 0px;" href="">Rynek</a>
+                    </div>
+                    <!--
+                    <nav class="col nav nav-pills nav-fill">
+                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                        <a class="nav-link" href="#">Much longer nav link</a>
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                      </nav>
+        -->
+                    <div class="col-3 d-md-inline d-none my-auto">
+                    <img src="images/logo.png" class="float-end img-fluid me-md-5" style="width: 40px;">
+                    </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="rounded h-50">
+        <div class="container mt-xl-4 p-5 w-75 h-75 d-flex align-items-center" style="background-color: #1e1e1e; color: #f8f8f8;">
+            <div class="profil-logo w-25">
+                <img src="images/logo-white.png" class="w-100 h-100 object-fit-cover">
+            </div>
+            <div class="profil-content">
+                <div class="informations d-flex">
+                    <col1 class="pe-5">
+                        <p class="h1 m-0">Username</p>
+                        <p class="h5 m-1" style="color: #6D6D6D;">He/him</p>
+                    </col1>
+                    <col2 class="pe-5 justify-content-end d-flex flex-column">
+                        <p class="h3 m-0">Newsletter</p>
+                        <p class="h5 m-1" style="color: #6D6D6D;">Active</p>
+                    </col2>
+                    <col3 class="pe-5 justify-content-end d-flex flex-column">
+                        <p class="h3 m-0">Tytuł</p>
+                        <p class="h5 m-1" style="color: #6D6D6D;">Senior front-end developer</p>
+                    </col3>
+                </div>
+                <div class="buttons">
+                    <button>Edytuj dane</button>
+                    <button>Zmień hasło</button>
+                    <button>Wyloguj się</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="category"></div>
+            <div class="category"></div>
+            <div class="category"></div>
+        </div>
+    </main>
+
+    <footer style="background-color: #0E0E0E; position: absolute; bottom: 0px; left: 0px; right: 0px;">
+        <div class="container position-relative">
+         <div class="row text-light d-none d-md-block">
+             <div class="d-flex justify-content-between align-items-end">
+                 <a style="color: #EB8259; text-decoration: none;" class="mt-4 h1" href="Newsy.php">ByteHouse</a>
+                 <p class="mt-4">Made by Czkafek and Tapik</p>
+             </div>
+             <div class="d-flex justify-content-end">
+                 <p>Github Czkafek</p>
+             </div>
+             <div class="d-flex justify-content-end">
+                 <p>Github Tapik</p>
+             </div>
+             <div class="d-flex justify-content-between mb-4">
+                 <div><a class="d-inline me-5 linki2" href="">Prawa Autorskie</a><a class="d-inline me-5 linki2" href="">Regulamin</a><a class="d-inline me-5 linki2" href="">Reklama</a><a class="d-inline me-5 linki2" href="">Kontakt</a></div>
+                 <p style="color: #8f8f8f;">&copy; 2024 Wszelkie prawa zastrzezone</p>
+             </div>
+         </div>
+         <div class="row text-light d-block d-md-none text-center" style="font-size: 3vw;">
+             <div class="col">
+                 <a style="color: #EB8259; text-decoration: none;" class=" h1" href="Newsy.php">ByteHouse</a>
+             </div>
+             <div class="col">
+                 <p class="mt-4">Made by Czkafek and Tapik</p>
+             </div>
+             <div class="col mb-4">
+                 <p class="d-inline me-3">Github Czkafek</p>
+                 <p class="d-inline ms-3">Github Tapik</p>
+             </div>
+             <div class="col" style="font-size: 2vw;">
+                 <a class="d-inline me-5 linki2" href="">Prawa Autorskie</a><a class="d-inline me-5 linki2" href="">Regulamin</a><a class="d-inline me-5 linki2" href="">Reklama</a><a class="d-inline me-5 linki2" href="">Kontakt</a>
+             </div>
+         </div>
+        </div> 
+     </footer>
+     <script src="js/bootstrap.js"></script>
+</body>
+</html>
