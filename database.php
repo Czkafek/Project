@@ -22,13 +22,9 @@ $db_server = "localhost";
     };
     
     function ilosc_wierszy(){
-        //SELECT COUNT(*) FROM News;
-        //SELECT COUNT(*) AS DateTime FROM News;
         global $conn;
         $query = "SELECT COUNT(*) FROM News;";
         $result = mysqli_query($conn,$query);
         $wynik = mysqli_fetch_row($result);
-        //var_dump($wynik); 
-        //echo $wynik[0];
         return $wynik[0];
     };
