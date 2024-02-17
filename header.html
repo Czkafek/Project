@@ -10,6 +10,10 @@
         body{
             background-color: #111111 !important;
         }
+        .active_link{
+            background-color: #1e1e1e !important;
+            opacity: 100%;
+        }
     </style>
 </head>
 <body>
@@ -24,11 +28,11 @@
             </div>
                 
                 <div class="col nav nav-pills nav-fill">
-                    <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center" href="">Nauka</a>
-                    <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center" href="Newsy.php?page=0">News</a>
-                    <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center" href="">Sklep</a>
-                    <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center" href="">Forum</a>
-                    <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center" href="">Rynek</a>
+                    <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center general-links" href="Nauka.php">Nauka</a>
+                    <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center general-links" href="Newsy.php?page=0">News</a>
+                    <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center general-links" href="Sklep.php">Sklep</a>
+                    <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center general-links" href="Forum.php">Forum</a>
+                    <a class="nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center general-links" href="Rynek.php">Rynek</a>
                 </div>
                 <!--
                 <nav class="col nav nav-pills nav-fill">
@@ -39,12 +43,33 @@
                   </nav>
     -->
                 <div class="col-3 d-md-inline d-none my-auto">
-                    <a href="profil.html"><img src="Images/logo.png" class="float-end img-fluid me-md-5" style="width: 40px;"></a>
+                    <a href="profil.html"><img src="Images/logo.png" class="float-end img-fluid me-md-5 general-links" style="width: 40px;"></a>
             </div>
         </div>
     </div>
     </nav>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="js/bootstrap.js"></script>
+    <script>
+        (function()
+            {
+                var d=document;
+                var links=document.getElementsByClassName("general-links");
+                for(i=0;i<links.length;i++)
+                {
+                    var link=links[i];
+                    if (location.href.indexOf("php")!= -1){
+                    if(location.href.startsWith(link.href.substr(0,location.href.indexOf("php"))))
+                        link.className='nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center active_link';
+                    }
+                    else{
+                        if(location.href.startsWith(link.href.substr(0,location.href.indexOf("html"))))
+                            link.className='nav-link col col-md-1 d-inline text-light linki text-center d-flex align-items-center justify-content-center active_link';
+                    }
+                        
+                }
+            }
+        )();
+    </script>
 </body>
 </html>
