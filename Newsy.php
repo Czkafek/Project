@@ -8,15 +8,18 @@ include_once('database.php')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
     <style>
       a{
         text-decoration: none !important;
       }
+      body{
+        background-color: #111111;
+        color: #f8f8f8 !important;
+      }
     </style>
 </head>
 <body style="height: 100vh; width: 100vw;">
-<div class="container">
+<div class="container" style="min-height: 100%;">
   <!--
   <div class="col">
     <div class="card h-100 border-0">
@@ -40,14 +43,14 @@ include_once('database.php')
       $row = get_news($i);
     echo '<div class="col">';
     echo  '<a href="strona_news.php?news='.$i.'">';
-    echo '<div class="card h-100 border-0">';
+    echo '<div class="card h-100 border-0" style="background-color: #1e1e1e; color: #f8f8f8;">';
     echo'<img src="'.$row['Image'].'" class="card-img-top" alt="...">';
     echo  '<div class="card-body mt-auto" style="max-height:75px;">';
     echo'    <h5 class="card-title">'.$row['Title'].'</h5>';
     echo'    <p class="card-text">'.$row['Short'].'</p>';
     echo '</div>';
     echo  '<div class="card-footer">';
-    echo'    <small class="text-body-secondary">'.$row['DateTime'].'</small>';
+    echo'    <small>'.$row['DateTime'].'</small>';
     echo'  </div>';
     echo'</div>';
     echo'</a>';
@@ -60,7 +63,7 @@ include_once('database.php')
 <div class="row row-cols-2 row-cols-md-2 g-4 mx-auto mb-5">
   <div class="col">
     <a href="strona_news.php?news=3">
-    <div class="card">
+    <div class="card"style="background-color: #1e1e1e; color: #f8f8f8;">
       <img src="Images/pomalowane-na-szaro-gladkie-teksturowane-tlo.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title"><?php $row = get_news(3); echo $row['Title']?></h5>
@@ -72,7 +75,7 @@ include_once('database.php')
 
   <div class="col">
   <a href="strona_news.php?news=4">
-    <div class="card">
+    <div class="card"style="background-color: #1e1e1e; color: #f8f8f8;">
       <img src="Images/coding-man.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title"><?php $row = get_news(4); echo $row['Title']?></h5>
@@ -96,7 +99,7 @@ include_once('database.php')
 <?php
 for ($i=5;$i<10;$i++){
     $row = get_news($i);
-    echo'<a class="card mb-3 my-3 mx-3" style="max-width: 540px;" href="strona_news.php?news='.$i.'">';
+    echo'<a class="card mb-3 my-3 mx-3" style="max-width: 540px;background-color: #1e1e1e; color: #f8f8f8;" href="strona_news.php?news='.$i.'">';
     echo'  <div class="row g-0">';
     echo'    <div class="col-4">';
     echo'      <img src="'.$row['Image'].'" class="img-fluid rounded-start" alt="...">';
@@ -126,7 +129,7 @@ for ($i=5;$i<10;$i++){
   for ($i=$_GET['page']*10;$i<$_GET['page']*10+10;$i++){
     if ($i < ilosc_wierszy()){
     $row = get_news($i);
-    echo'<a class="card mb-3 my-3 mx-3" style="max-width: 540px;" href="strona_news.php?news='.$i.'">';
+    echo'<a class="card mb-3 my-3 mx-3" style="background-color: #1e1e1e; color: #f8f8f8;max-width: 540px;" href="strona_news.php?news='.$i.'">';
     echo'  <div class="row g-0">';
     echo'    <div class="col-4">';
     echo'      <img src="'.$row['Image'].'" class="img-fluid rounded-start" alt="...">';

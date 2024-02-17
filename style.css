@@ -1,6 +1,4 @@
-body{
-    background-color: rgb(34, 33, 33) !important;
-}
+
 .linki{
     text-decoration: none;
     opacity: 80%;
@@ -12,10 +10,7 @@ body{
     background-color: #1E1E1E;
 }
 
-.newsy_glowne{
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 .linki2{
     color: whitesmoke;
     text-decoration: none;
