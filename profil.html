@@ -8,11 +8,12 @@
     <style>
         a {
             text-decoration: none;
+            color: #8f8f8f;
         }
         body {
             background-color: #111111;
-            width: 100vw;
             height: 100vh;
+            width: 100vw;
         }
         button {
             background-color: #EB8259;
@@ -69,24 +70,25 @@
         </div>
     </nav>
 
-    <main style="min-height: 90vh;">
-        <div class="container mt-xl-4 p-5 w-75 h-75 d-flex" style="background-color: #1e1e1e; color: #f8f8f8;">
-            <div class="profil-logo w-25">
+    <main class="d-flex flex-column align-items-center">
+        <div class="container mt-xl-4 p-5 m-0 w-75 d-flex" style="background-color: #1e1e1e; color: #f8f8f8;">
+            <div class="profil-logo w-25 h-100">
                 <img src="images/logo-white.png" class="w-100 h-100 object-fit-cover">
             </div>
-            <div class="profil-content pt-5">
+            <div class="profil-content pt-5 w-75">
                 <div class="informations d-flex">
                     <col1 class="pe-5">
                         <p class="h1 m-0">Username</p>
                         <p class="h5 m-1" style="color: #6D6D6D;">He/him</p>
                     </col1>
-                    <col2 class="pe-5 justify-content-end d-flex flex-column">
+                    <col2 class="pe-5 d-flex flex-column justify-content-end">
                         <p class="h3 m-0">Newsletter</p>
                         <p class="h5 m-1" style="color: #6D6D6D;">Active</p>
                     </col2>
-                    <col3 class="pe-5 justify-content-end d-flex flex-column">
+                    <col3 class="pe-5 d-flex flex-column justify-content-end">
                         <p class="h3 m-0">Tytuł</p>
                         <p class="h5 m-1" style="color: #6D6D6D;">Senior front-end developer</p>
+
                     </col3>
                 </div>
                 <div class="buttons">
@@ -104,7 +106,7 @@
             <div class="category-title container w-75 p-0 h1 mt-3" style="color: #f8f8f8;">
                 <p>Twoje wpisy:</p>
             </div>
-            <div class="container w-75 p-5 mt-5" style="background-color: #1e1e1e; color: #9d9d9d;">
+            <div class="container w-75 p-5 m-0 mt-5" style="background-color: #1e1e1e; color: #9d9d9d;">
                 <div class="wpis-title h1" style="color: #f8f8f8;">Nazwa wpisu</div>
                 <div class="wpis-content h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae nulla sit amet est vestibulum ultrices ut a arcu. Curabitur vitae aliquet tellus, ultrices tincidunt urna. Aenean sem...</div>
                 <div class="wpis-stats-buttons d-flex my-auto mt-4">
@@ -112,13 +114,13 @@
                         <p class="me-4 my-auto">Odpowiedzi: <span style="color: #EB8259;">0</span></p>
                         <p class="my-auto">Likes: <span style="color: #EB8259;">0</span></p>
                     </div>
-                    <div class="wpis-buttons d-flex align-items-center">
+                    <div class="wpis-buttons d-flex align-items-center"">
                         <button class="me-3">Edytuj</button>
                         <button>Przejdź do wpisu</button>
                     </div>
                 </div>
             </div>
-            <div class="container w-75 p-5 mt-5" style="background-color: #1e1e1e; color: #9d9d9d;">
+            <div class="container w-75 p-5 m-0 mt-5" style="background-color: #1e1e1e; color: #9d9d9d;">
                 <div class="wpis-title h1" style="color: #f8f8f8;">Nazwa wpisu</div>
                 <div class="wpis-content h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae nulla sit amet est vestibulum ultrices ut a arcu. Curabitur vitae aliquet tellus, ultrices tincidunt urna. Aenean sem...</div>
                 <div class="wpis-stats-buttons d-flex my-auto mt-4">
@@ -126,59 +128,60 @@
                         <p class="me-4 my-auto">Odpowiedzi: <span style="color: #EB8259;">0</span></p>
                         <p class="my-auto">Likes: <span style="color: #EB8259;">0</span></p>
                     </div>
-                    <div class="wpis-buttons d-flex align-items-center">
+                    <div class="wpis-buttons d-flex align-items-center"">
                         <button class="me-3">Edytuj</button>
                         <button>Przejdź do wpisu</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="kursy collapse pb-5" id="sledzoneKursy">
-            <div class="category-title container w-75 p-0 h1 mt-3" style="color: #f8f8f8;">
-                <p>Twoje kursy:</p>
+        <div class="kursy collapse pb-5 w-100" id="sledzoneKursy">
+            <div class="d-flex flex-column align-items-center">
+                <div class="category-title container w-75 p-0 h1 mt-3" style="color: #f8f8f8;">
+                    <p>Twoje kursy:</p>
+                </div>
+                <div class="container w-75 p-4 m-0 mt-5 d-flex" style="background-color: #1e1e1e; color: #9d9d9d;">
+                    <div class="kurs-img" style="height: 12vw; width: 12vw;">
+                        <img src="images/course-image.jpg" alt="course image" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="kurs-content ms-4 pt-2">
+                        <div class="kurs-title">
+                            <p class="h1" style="color: #f8f8f8;">Nazwa kursu</p>
+                        </div>
+                        <div class="kurs-stats h5 mt-3">
+                            <p class="mb-1">Następny temat: <span style="color: #EB8259;">6. Nazwa tematu</span></p>
+                            <p>Postęp: <span style="color: #EB8259;">52%</span></p>
+                        </div>
+                        <div class="kurs-buttons mt-4">
+                            <button class="me-3">Kontynuuj</button>
+                            <button>Zakończ kurs</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container w-75 p-4 m-0 mt-5 d-flex" style="background-color: #1e1e1e; color: #9d9d9d;">
+                    <div class="kurs-img" style="height: 12vw; width: 12vw;">
+                        <img src="images/course-image.jpg" alt="course image" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="kurs-content ms-4 pt-2">
+                        <div class="kurs-title">
+                            <p class="h1" style="color: #f8f8f8;">Nazwa kursu</p>
+                        </div>
+                        <div class="kurs-stats h5 mt-3">
+                            <p class="mb-1">Następny temat: <span style="color: #EB8259;">6. Nazwa tematu</span></p>
+                            <p>Postęp: <span style="color: #EB8259;">52%</span></p>
+                        </div>
+                        <div class="kurs-buttons mt-4">
+                            <button class="me-3">Kontynuuj</button>
+                            <button>Zakończ kurs</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="container w-75 p-4 mt-5 d-flex" style="background-color: #1e1e1e; color: #9d9d9d;">
-                <div class="kurs-img" style="height: 12vw; width: 12vw;">
-                    <img src="images/course-image.jpg" alt="course image" class="w-100 h-100 object-fit-cover">
-                </div>
-                <div class="kurs-content ms-4 pt-2">
-                    <div class="kurs-title">
-                        <p class="h1" style="color: #f8f8f8;">Nazwa kursu</p>
-                    </div>
-                    <div class="kurs-stats h5 mt-3">
-                        <p class="mb-1">Następny temat: <span style="color: #EB8259;">6. Nazwa tematu</span></p>
-                        <p>Postęp: <span style="color: #EB8259;">52%</span></p>
-                    </div>
-                    <div class="kurs-buttons mt-4">
-                        <button class="me-3">Kontynuuj</button>
-                        <button>Zakończ kurs</button>
-                    </div>
-                </div>
-            </div>
-            <div class="container w-75 p-4 mt-5 d-flex" style="background-color: #1e1e1e; color: #9d9d9d;">
-                <div class="kurs-img" style="height: 12vw; width: 12vw;">
-                    <img src="images/course-image.jpg" alt="course image" class="w-100 h-100 object-fit-cover">
-                </div>
-                <div class="kurs-content ms-4 pt-2">
-                    <div class="kurs-title">
-                        <p class="h1" style="color: #f8f8f8;">Nazwa kursu</p>
-                    </div>
-                    <div class="kurs-stats h5 mt-3">
-                        <p class="mb-1">Następny temat: <span style="color: #EB8259;">6. Nazwa tematu</span></p>
-                        <p>Postęp: <span style="color: #EB8259;">52%</span></p>
-                    </div>
-                    <div class="kurs-buttons mt-4">
-                        <button class="me-3">Kontynuuj</button>
-                        <button>Zakończ kurs</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
     </main>
 
-    <footer style="background-color: #0E0E0E; position: relative; bottom: 0; width: 100%;">
+    <footer style="background-color: #0E0E0E; position: relative; bottom: 0;width: 100%;">
         <div class="container position-relative">
          <div class="row text-light d-none d-md-block">
              <div class="d-flex justify-content-between align-items-end">
@@ -212,8 +215,8 @@
              </div>
          </div>
         </div> 
-     </footer>
-     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-     <script src="js/bootstrap.js"></script>
+    </footer>
+
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>
