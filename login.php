@@ -49,12 +49,28 @@
     include('database.php');
 
     if(isset($_POST['submit'])) {
-        if(isset($_POST['mail']) && isset($_POST['password'])) {
+        
+        $mail_name = $_POST['mail'];
+        $password = $_POST['password'];
 
+        $query = "SELECT *FROM user_db WHERE username='$mail_name' OR email='$mail_name' AND password='$password'";
+
+        $result = $conn->query(($query));
+
+        if($result->num_rows == 1) {
+            // login success
+            $query = "SELECT username FROM user_db WHERE password='$password'";
+            $result = $conn->query(($query));
+            $_SESSION["userSession"] = $result;
+            echo $result;
         }
         else {
-            echo"You didn't enter a username/email or password";
+            // login failed
+            echo"Wrong email/username or password";
         }
+
+        $conn->close();
+
     }
 
 ?>
