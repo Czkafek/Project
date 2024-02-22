@@ -2,7 +2,7 @@
 include "header.html";
 session_start();
 echo $_SESSION['username'];
-if (empty($_SESSION['username'])){
+if (empty($_SESSION['userSession']['username'])){
     header("location: login.php");
 }
 ?>
@@ -37,6 +37,19 @@ if (empty($_SESSION['username'])){
             height: auto;
             font-size: 80%;
         }
+        button, input{
+            background-color: #EB8259;
+            color: #1e1e1e;
+            border-radius: 100px;
+            padding: 0.8% 3% 0.8% 3%;
+            /*margin: 30px 10px 0px 0px;*/
+            transition: background-color 0.15s;
+            border: none;
+        }
+
+        button:hover, input:hover{
+            background-color: #eb9979;
+        }
 
     </style>
 </head>
@@ -61,11 +74,13 @@ if (empty($_SESSION['username'])){
                         <p class="h5 mt-1" style="color: #6D6D6D;">Active</p>
                     </col2>
                 </div>
+                <form method="post">
                 <div class="buttons">
-                    <button class="m-1 profil-button" style="color: #1e1e1e; font-weight: 700;">Edytuj dane</button>
-                    <button class="m-1 profil-button" style="color: #1e1e1e; font-weight: 700;">Zmień hasło</button>
-                    <button class="m-1 profil-button" style="color: #1e1e1e; font-weight: 700;">Wyloguj się</button>
+                    <input class="m-1 profil-button text-center" style="color: #1e1e1e; font-weight: 700;" value="Edytuj dane" type="submit" name="Edycja">
+                    <input class="m-1 profil-button text-center" style="color: #1e1e1e; font-weight: 700;" value="Zmień hasło" type="submit" name="Zmiana_haslo">
+                    <input class="m-1 profil-button text-center" style="color: #1e1e1e; font-weight: 700;" value="Wyloguj się" type="submit" name="log_out">
                 </div>
+                </form>
             </div>
         </div>
         <div class="container d-flex w-100 p-0 hover-overlay" style="color: #1e1e1e;">
@@ -147,9 +162,15 @@ if (empty($_SESSION['username'])){
         </div>
 
     </main>
-
+    <?php 
+    if (isset($_POST['log_out'])){
+        unset($_SESSION['userSession']);
+        header('location: login.php');
+    }
+    
+    ?>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-        <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.js"></script>
     
     
 </body>

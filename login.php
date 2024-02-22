@@ -1,6 +1,9 @@
 <?php 
     session_start();
     include_once "header.html";
+    if (!empty($_SESSION['userSession'])){
+        header("location: profil.php");
+    };
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,19 +25,47 @@
         <form class="text-light" method="post">
             <h1 class="text-center m-4">Login Page</h1>
             <div class="mb-3">
-                <label for="InputEmail" class="form-label">Email address</label>
-                <input type="email" class="form-control bg-dark text-light" id="InputEmail" aria-describedby="emailHelp" required name="mail">
+                <label for="InputEmail" class="form-label">Email address or Username</label>
+                <input class="form-control bg-dark text-light" id="InputEmail" aria-describedby="emailHelp" required name="mail" minlength="3">
                 <div id="emailHelp" class="form-text text-light">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
                 <label for="InputPassword" class="form-label">Password</label>
                 <input type="password" class="form-control bg-dark text-light" id="InputPassword" required name="password">
             </div>
-            <button type="submit" class="btn btn-primary" name="submit">Log in</button>
+            <input type="submit" class="btn btn-primary" name="submit" value="Log in">
         </form>
         <a href="register.php">
             Not have acounnt?
         </a>
+        <?php 
+            //echo "UWU";
+            include('database.php');
+
+            if(isset($_POST['submit'])) {
+                
+                $mail_name = $_POST['mail'];
+                $password = $_POST['password'];
+
+                $query = "SELECT username,email FROM user_db WHERE (username='Tapik' OR email='$mail_name') AND (password='$password')";
+                $result = $conn->query($query);
+                //echo "UU";
+                if($result->num_rows == 1) {
+                    // login success
+                    $dane = mysqli_fetch_assoc($result);
+                    $_SESSION["userSession"] = $dane;
+                    header("location: profil.php");
+                }
+                else {
+                    // login failed
+                    echo"Wrong email/username or password";
+                }
+
+                //$conn->close();
+
+            }
+            //echo "UWU";
+        ?>
         </div>
         </main>
 </body>
@@ -43,34 +74,4 @@
 </html>
 <?php 
     include_once "footer.html";
-?>
-<?php 
-
-    include('database.php');
-
-    if(isset($_POST['submit'])) {
-        
-        $mail_name = $_POST['mail'];
-        $password = $_POST['password'];
-
-        $query = "SELECT *FROM user_db WHERE username='$mail_name' OR email='$mail_name' AND password='$password'";
-
-        $result = $conn->query(($query));
-
-        if($result->num_rows == 1) {
-            // login success
-            $query = "SELECT username FROM user_db WHERE password='$password'";
-            $result = $conn->query(($query));
-            $_SESSION["userSession"] = $result;
-            echo $result;
-        }
-        else {
-            // login failed
-            echo"Wrong email/username or password";
-        }
-
-        $conn->close();
-
-    }
-
 ?>
