@@ -1,6 +1,6 @@
 <?php 
-session_start();
-include_once "header.html";
+    session_start();
+    include_once "header.html";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +30,7 @@ include_once "header.html";
                 <label for="InputPassword" class="form-label">Password</label>
                 <input type="password" class="form-control bg-dark text-light" id="InputPassword" required name="password">
             </div>
-            <button type="submit" class="btn btn-primary">Log in</button>
+            <button type="submit" class="btn btn-primary" name="submit">Log in</button>
         </form>
         <a href="register.php">
             Not have acounnt?
@@ -42,5 +42,19 @@ include_once "header.html";
 <script src="js/bootstrap.js"></script>
 </html>
 <?php 
-include_once "footer.html";
+    include_once "footer.html";
+?>
+<?php 
+
+    include('database.php');
+
+    if(isset($_POST['submit'])) {
+        if(isset($_POST['mail']) && isset($_POST['password'])) {
+
+        }
+        else {
+            echo"You didn't enter a username/email or password";
+        }
+    }
+
 ?>
