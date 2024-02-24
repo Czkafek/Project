@@ -47,14 +47,14 @@
                 $mail_name = $_POST['mail'];
                 $password = $_POST['password'];
 
-                $query = "SELECT username,email FROM user_db WHERE (username='Tapik' OR email='$mail_name') AND (password='$password')";
+                $query = "SELECT username,email FROM user_db WHERE (username='username' OR email='$mail_name') AND (password='$password')";
                 $result = $conn->query($query);
                 //echo "UU";
                 if($result->num_rows == 1) {
                     // login success
                     $dane = mysqli_fetch_assoc($result);
                     $_SESSION["userSession"] = $dane;
-                    header("location: profil.php");
+                    // header("location: profil.php");
                 }
                 else {
                     // login failed
