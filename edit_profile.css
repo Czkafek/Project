@@ -1,0 +1,126 @@
+
+
+
+
+@media (max-width: 576px) {
+    .avatar-buttons button {
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .avatar-buttons button {
+        font-size: 1rem;
+        border-radius: 11px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .avatar-buttons button {
+        font-size: 1.3rem;
+        border-radius: 11px;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .avatar-buttons button {
+        font-size: 1.5rem;
+        border-radius: 13px;
+    }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .avatar-buttons button {
+        font-size: 1.5rem;
+        border-radius: 13px;
+    }
+}
+
+
+@media (min-width: 1400px) and (max-width: 1480px) {
+    .avatar-buttons button {
+        font-size: 1.5rem;
+        border-radius: 15px;
+    }
+}
+
+
+@media (min-width: 1480px) {
+    .avatar-buttons button {
+        font-size: 2rem;
+        border-radius: 15px;
+    }
+}
+
+
+
+
+body {
+    background-color: #111111;
+    height: 100vh;
+    width: 100vw;
+}
+.main-container {
+    background-color: #1E1E1E;
+}
+.avatar-container {
+    display: flex;
+    column-gap: 3%;
+    justify-content: center;
+}
+.avatar-img {
+    -webkit-filter: brightness(100%);
+    border-radius: 1000px;
+}
+.avatar {
+    width: 22%;
+    position: relative;
+    border-radius: 1000px;
+}
+.image-hover-icon {
+    width: 40%;
+    position: absolute;
+    top: 36%;
+    left: 32%;
+}
+.avatar a {
+    display: none;
+}
+.avatar:hover a {
+    display: block;
+}
+.avatar:hover .avatar-img {
+    -webkit-filter: brightness(40%);
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    -ms-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+}
+.avatar-buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5%;
+    justify-content: center;
+}
+.avatar-buttons button {
+    background-color: #151515;
+    border: none;
+    padding: 0.7vw 2vw 0.7vw 2vw;
+    text-wrap: nowrap;
+}
+.avatar-buttons button:nth-child(1) {
+    background-color: #151515;
+    color: #f8f8f8;
+    font-weight: 600;
+}
+.avatar-buttons button:nth-child(2) {
+    background-color: #eb8259;
+    color: #2d1c07;
+    font-weight: 700;
+}
