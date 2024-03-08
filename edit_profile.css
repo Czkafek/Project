@@ -7,6 +7,13 @@
         font-size: 1rem;
         border-radius: 8px;
     }
+    .information-status textarea {
+        font-size: 3.5vw;
+        border-radius: 8px;
+    }
+    .information-name {
+        font-size: 4.5vw;
+    }
 }
 
 
@@ -14,6 +21,13 @@
     .avatar-buttons button {
         font-size: 1rem;
         border-radius: 11px;
+    }
+    .information-status textarea {
+        font-size: 3vw;
+        border-radius: 5px;
+    }
+    .information-name {
+        font-size: 4vw;
     }
 }
 
@@ -23,6 +37,13 @@
         font-size: 1.3rem;
         border-radius: 11px;
     }
+    .information-status textarea {
+        font-size: 2.5vw;
+        border-radius: 5px;
+    }
+    .information-name {
+        font-size: 3.5vw;
+    }
 }
 
 
@@ -30,6 +51,13 @@
     .avatar-buttons button {
         font-size: 1.5rem;
         border-radius: 13px;
+    }
+    .information-status textarea {
+        font-size: 1.6vw;
+        border-radius: 5px;
+    }
+    .information-name {
+        font-size: 2.7vw;
     }
 }
 
@@ -39,6 +67,13 @@
         font-size: 1.5rem;
         border-radius: 13px;
     }
+    .information-status textarea {
+        font-size: 1.2vw;
+        border-radius: 5px;
+    }
+    .information-name {
+        font-size: 2.2vw;
+    }
 }
 
 
@@ -47,6 +82,13 @@
         font-size: 1.5rem;
         border-radius: 15px;
     }
+    .information-status textarea {
+        font-size: 1.2vw;
+        border-radius: 5px;
+    }
+    .information-name {
+        font-size: 2.2vw;
+    }
 }
 
 
@@ -54,6 +96,13 @@
     .avatar-buttons button {
         font-size: 2rem;
         border-radius: 15px;
+    }
+    .information-status textarea {
+        font-size: 1.2vw;
+        border-radius: 5px;
+    }
+    .information-name {
+        font-size: 2.2vw;
     }
 }
 
@@ -123,4 +172,63 @@ body {
     background-color: #eb8259;
     color: #2d1c07;
     font-weight: 700;
+}
+
+
+
+.information {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 45%;
+    padding-top: 1vw;
+}
+.information-name {
+    color: #f8f8f8;
+    font-weight: 600;
+}
+.information-status {
+    width: 100%;
+}
+.information-status textarea{
+    resize: none;
+    background-color: #111111;
+    border: none;
+    color: #f8f8f8;
+    outline: none;
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    width: 100%;
+}
+.information-status button {
+    margin-top: 0.5vw;
+    background-color: #555555;
+    border: none;
+    color: #f8f8f8;
+    font-size: 1.5vw;
+    border-radius: 12px;
+    padding: 0.4vw 1.5vw 0.4vw 1.5vw;
+    transition: opacity 0.15s;
+}
+.information-status button:hover {
+    opacity: 0.7;
+}
+#email-status {
+    width: 85%;
+}
+.information-email {
+    display: flex;
+    align-items: center;
+    column-gap: 1vw;
+}
+.information-email p {
+    font-size: 1.2vw;
+    color: #eb8259;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 400;
+    transition: opacity 0.15s;
+}
+.information-email p:hover {
+    opacity: 0.5;
 }
