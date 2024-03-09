@@ -97,7 +97,7 @@ if (isset($_POST["edytuj_dane"])){
         <?php
         }
         else{
-            $query = "UPDATE `user_db` SET `username`='{$_POST['username']}' WHERE `username`='{$_SESSION['userSession']['username']}}' ;";
+            $query = "UPDATE `user_db` SET `username`='{$_POST['username']}' WHERE `username`='{$_SESSION['userSession']['username']}' ;";
             mysqli_query($conn,$query);
             $_SESSION['userSession']['username'] = $_POST['username'];
         }
@@ -105,7 +105,6 @@ if (isset($_POST["edytuj_dane"])){
     $_SESSION['userSession']['pronoun'] = $_POST['pronoun'];
     $_SESSION['userSession']['title'] = $_POST['title'];
     $query = "UPDATE `user_db` SET `pronoun`='{$_POST['pronoun']}', `title`='{$_POST['title']}' WHERE `username`='{$_SESSION['userSession']['username']}' ;";
-    echo $query;
     mysqli_query($conn,$query);
 }
 
