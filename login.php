@@ -47,7 +47,8 @@
                 $mail_name = $_POST['mail'];
                 $password = $_POST['password'];
 
-                $query = "SELECT username,email FROM user_db WHERE (username='username' OR email='$mail_name') AND (password='$password')";
+                $query = "SELECT username,email,pronoun,title,Image FROM user_db WHERE (username='$mail_name' OR email='$mail_name') AND (password='$password')";
+                //echo $query;
                 $result = $conn->query($query);
                 //echo "UU";
                 if($result->num_rows == 1) {
