@@ -1,10 +1,7 @@
 <?php 
-
-    include 'header.html';
-    include 'databse.php';
     session_start();
-
-
+    include ('header.html');
+    if (isset($_POST['edytuj_dane'])){header("Refresh:0");}
 ?>
 
 <!DOCTYPE html>
@@ -75,30 +72,53 @@
             </div>
             <div class="information-status">
                 <div class="information-email">
-                    <input type="text" class="form-control bg-dark text-light border-0" style="background-color: #111111 !important;" rows="1" maxlength="25" minlength="1" id="email-status" name="email" value="<?php echo $_SESSION["userSession"]["email"];?>">
+                    <input type="email" class="form-control bg-dark text-light border-0" style="background-color: #111111 !important;" rows="1" maxlength="25" minlength="1" id="email-status" name="email" value="<?php echo $_SESSION["userSession"]["email"];?>">
                 </div>
                 <input type="submit" value="Edytuj" class="btn btn-secondary" name="edytuj_dane">
             </div>
         </div>
         </form>
     </div>
-</section>
+
 <?php
+include('database.php');
 
 if (isset($_POST["edytuj_dane"])){
-    echo $_POST['username'];
-    ?>
-
-    <?php
+    if ($_POST['username'] != $_SESSION['userSession']['username']){
+        $query = "SELECT `username` FROM `user_db` WHERE username='{$_POST['username']}' ;";
+        $result = mysqli_query($conn,$query);
+        if (mysqli_num_rows($result) > 0){
+        //echo $result;
+        ?>
+            <div class="alert alert-danger alert-dismissible fade show bg-danger border-danger" role="alert">
+                <strong>Holy guacamole!</strong> That Username is already taken!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php
+        }
+        else{
+            $query = "UPDATE `user_db` SET `username`='{$_POST['username']}' WHERE `username`='{$_SESSION['userSession']['username']}}' ;";
+            mysqli_query($conn,$query);
+            $_SESSION['userSession']['username'] = $_POST['username'];
+        }
+    }
+    $_SESSION['userSession']['pronoun'] = $_POST['pronoun'];
+    $_SESSION['userSession']['title'] = $_POST['title'];
+    $query = "UPDATE `user_db` SET `pronoun`='{$_POST['pronoun']}', `title`='{$_POST['title']}' WHERE `username`='{$_SESSION['userSession']['username']}' ;";
+    echo $query;
+    mysqli_query($conn,$query);
 }
 
 
 ?>
+</section>
+
 </main>
 </body>
 </html>
 
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="js/bootstrap.js"></script>
 
 <?php 
 
