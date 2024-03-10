@@ -3,7 +3,7 @@
 
 
 @media (max-width: 576px) {
-    .avatar-buttons button {
+    .buttons button {
         font-size: 1rem;
         border-radius: 8px;
     }
@@ -14,11 +14,21 @@
     .information-name {
         font-size: 4.5vw;
     }
+    .information {
+        width: 75%;
+    }
+    .information-email p {
+        font-size: 3.2vw;
+    }
+    .information-status button {
+        font-size: 3.2vw;
+        border-radius: 5px;
+    }
 }
 
 
 @media (min-width: 576px) and (max-width: 768px) {
-    .avatar-buttons button {
+    .buttons button {
         font-size: 1rem;
         border-radius: 11px;
     }
@@ -29,12 +39,22 @@
     .information-name {
         font-size: 4vw;
     }
+    .information {
+        width: 75%;
+    }
+    .information-email p {
+        font-size: 2.8vw;
+    }
+    .information-status button {
+        font-size: 2.8vw;
+        border-radius: 5px;
+    }
 }
 
 
 @media (min-width: 768px) and (max-width: 992px) {
-    .avatar-buttons button {
-        font-size: 1.3rem;
+    .buttons button {
+        font-size: 2vw;
         border-radius: 11px;
     }
     .information-status textarea {
@@ -44,12 +64,22 @@
     .information-name {
         font-size: 3.5vw;
     }
+    .information {
+        width: 65%;
+    }
+    .information-email p {
+        font-size: 2.2vw;
+    }
+    .information-status button {
+        font-size: 2.2vw;
+        border-radius: 8px;
+    }
 }
 
 
 @media (min-width: 992px) and (max-width: 1200px) {
-    .avatar-buttons button {
-        font-size: 1.5rem;
+    .buttons button {
+        font-size: 1.7vw;
         border-radius: 13px;
     }
     .information-status textarea {
@@ -59,12 +89,22 @@
     .information-name {
         font-size: 2.7vw;
     }
+    .information {
+        width: 45%;
+    }
+    .information-email p {
+        font-size: 1.7vw;
+    }
+    .information-status button {
+        font-size: 1.7vw;
+        border-radius: 8px;
+    }
 }
 
 
 @media (min-width: 1200px) and (max-width: 1400px) {
-    .avatar-buttons button {
-        font-size: 1.5rem;
+    .buttons button {
+        font-size: 1.7vw;
         border-radius: 13px;
     }
     .information-status textarea {
@@ -74,12 +114,22 @@
     .information-name {
         font-size: 2.2vw;
     }
+    .information {
+        width: 45%;
+    }
+    .information-email p {
+        font-size: 1.2vw;
+    }
+    .information-status button {
+        font-size: 1.5vw;
+        border-radius: 8px;
+    }
 }
 
 
 @media (min-width: 1400px) and (max-width: 1480px) {
-    .avatar-buttons button {
-        font-size: 1.5rem;
+    .buttons button {
+        font-size: 1.7vw;
         border-radius: 15px;
     }
     .information-status textarea {
@@ -88,13 +138,23 @@
     }
     .information-name {
         font-size: 2.2vw;
+    }
+    .information {
+        width: 45%;
+    }
+    .information-email p {
+        font-size: 1.2vw;
+    }
+    .information-status button {
+        font-size: 1.5vw;
+        border-radius: 12px;
     }
 }
 
 
 @media (min-width: 1480px) {
-    .avatar-buttons button {
-        font-size: 2rem;
+    .buttons button {
+        font-size: 1.5vw;
         border-radius: 15px;
     }
     .information-status textarea {
@@ -103,6 +163,16 @@
     }
     .information-name {
         font-size: 2.2vw;
+    }
+    .information {
+        width: 45%;
+    }
+    .information-email p {
+        font-size: 1.2vw;
+    }
+    .information-status button {
+        font-size: 1.5vw;
+        border-radius: 12px;
     }
 }
 
@@ -113,9 +183,14 @@ body {
     background-color: #111111;
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
+}
+main {
+    padding-bottom: 9.3vw;
 }
 .main-container {
     background-color: #1E1E1E;
+    padding-bottom: 10vw;
 }
 .avatar-container {
     display: flex;
@@ -151,28 +226,38 @@ body {
     -ms-transition: all 0.15s ease;
     transition: all 0.15s ease;
 }
-.avatar-buttons {
+.buttons {
     display: flex;
     flex-direction: column;
     row-gap: 5%;
     justify-content: center;
 }
-.avatar-buttons button input {
-    background-color: #151515;
+.buttons button {
     border: none;
-    padding: 0.7vw 2vw 0.7vw 2vw;
+    padding: 0.5vw 2vw 0.5vw 2vw;
     text-wrap: nowrap;
+    -webkit-filter: brightness(100%);
 }
-.avatar-buttons input:nth-child(1) {
+.buttons button:nth-child(1) {
     background-color: #151515;
     color: #f8f8f8;
     font-weight: 600;
 }
-.avatar-buttons input:nth-child(2) {
+.buttons button:nth-child(2) {
     background-color: #eb8259;
     color: #2d1c07;
     font-weight: 700;
 }
+.buttons button:hover {
+    -webkit-filter: brightness(80%);
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    -ms-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+}
+
+
 
 
 
@@ -181,12 +266,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: left;
-    width: 45%;
     padding-top: 1vw;
 }
 .information-name {
+    display: flex;
+    width: 100%;
     color: #f8f8f8;
     font-weight: 600;
+}
+.information-name p{
+    margin: 0px;
+    padding: 0px;
 }
 .information-status {
     width: 100%;
@@ -205,8 +295,6 @@ body {
     background-color: #555555;
     border: none;
     color: #f8f8f8;
-    font-size: 1.5vw;
-    border-radius: 12px;
     padding: 0.4vw 1.5vw 0.4vw 1.5vw;
     transition: opacity 0.15s;
 }
@@ -222,7 +310,6 @@ body {
     column-gap: 1vw;
 }
 .information-email p {
-    font-size: 1.2vw;
     color: #eb8259;
     margin: 0px;
     padding: 0px;
@@ -233,6 +320,18 @@ body {
     opacity: 0.5;
 }
 
+
+#newsletter-buttons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+}
+#newsletter-buttons button:nth-child(1) {
+    flex: 1;
+}
+#newsletter-buttons button:nth-child(2) {
+    flex: 1;
+}
 /*
 
     ZRÓB TAK, ŻE PO PEWNYM CZASIE WIELKOŚĆ SIĘ ZWIĘKSZA TYCH TEXTAREA,
