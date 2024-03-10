@@ -232,3 +232,11 @@ body {
 .information-email p:hover {
     opacity: 0.5;
 }
+
+/*
+
+    ZRÓB TAK, ŻE PO PEWNYM CZASIE WIELKOŚĆ SIĘ ZWIĘKSZA TYCH TEXTAREA,
+    WIĘC MUSISZ ZMIENIĆ WIELKOŚĆ .INFORMATION Z
+    width: 45%; na np. width: 55%; idk popróbuj
+
+*/
