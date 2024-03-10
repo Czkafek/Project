@@ -1,6 +1,7 @@
 <?php 
     session_start();
     include_once "header.html";
+    if (isset($_POST['submit'])){header("Refresh:0");}
     if (!empty($_SESSION['userSession'])){
         header("location: profil.php");
     };

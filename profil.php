@@ -1,6 +1,7 @@
 <?php
 include "header.html";
 session_start();
+if (isset($_POST['log_out'])){header("Refresh:0");}
 if (empty($_SESSION['userSession'])){
     header("location: login.php");
 }
@@ -61,12 +62,12 @@ if (empty($_SESSION['userSession'])){
             <div class="profil-content w-100">
                 <div class="informations">
                     <col1 class="d-flex flex-column justify-content-end">
-                        <p class="h1 m-0">Username</p>
+                        <p class="h1 m-0"><?php echo $_SESSION['userSession']['username']?></p>
                         <p class="h5 mt-1" style="color: #6D6D6D;">He/him</p>
                     </col1>
                     <col2 class="d-flex flex-column justify-content-end" style="overflow: hidden;">
                         <p class="h2 m-0">Tytuł</p>
-                        <p class="h5 mt-1" style="color: #6D6D6D; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Senior front-end developer</p>
+                        <p class="h5 mt-1" style="color: #6D6D6D; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;"><?php echo $_SESSION['userSession']['title']?></p>
                     </col2>
                     <col2 class="d-flex flex-column justify-content-end">
                         <p class="h2 m-0">Newsletter</p>
@@ -75,7 +76,7 @@ if (empty($_SESSION['userSession'])){
                 </div>
                 <form method="post">
                 <div class="buttons">
-                    <input class="m-1 profil-button text-center" style="color: #1e1e1e; font-weight: 700;" value="Edytuj dane" type="submit" name="Edycja">
+                   <a href="edit_profile.php"> <input class="m-1 profil-button text-center" style="color: #1e1e1e; font-weight: 700;" value="Edytuj dane" type="button" name="Edycja"></a>
                     <input class="m-1 profil-button text-center" style="color: #1e1e1e; font-weight: 700;" value="Zmień hasło" type="submit" name="Zmiana_haslo">
                     <input class="m-1 profil-button text-center" style="color: #1e1e1e; font-weight: 700;" value="Wyloguj się" type="submit" name="log_out">
                 </div>

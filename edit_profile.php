@@ -1,7 +1,7 @@
 <?php 
     session_start();
     include ('header.html');
-    if (isset($_POST['edytuj_dane'])){header("Refresh:0");}
+    //if (isset($_POST['edytuj_dane'])){header("Refresh:0");}
 ?>
 
 <!DOCTYPE html>
@@ -15,32 +15,56 @@
     <link rel="stylesheet" href="edit_profile.css">
 
     <style>
-        .information-status textarea{
-    resize: none;
-    background-color: #111111;
-    border: none;
-    color: #f8f8f8;
-    outline: none;
-    padding: 0.5vw 1vw 0.5vw 1vw;
-    width: 100%;
+ input[type="file"]{
+  display: none;
 }
+label{
+    cursor: pointer;
+}
+
+.avatar-buttons input:nth-child(1) {
+    background-color: #151515;
+    color: #f8f8f8;
+    font-weight: 600;
+}
+.avatar-buttons input:nth-child(2) {
+    background-color: #eb8259;
+    color: #2d1c07;
+    font-weight: 700;
+}
+
+.avatar-buttons input {
+    background-color: #151515;
+    border: none;
+    padding: 0.7vw 2vw 0.7vw 2vw;
+    text-wrap: nowrap;
+    float: right;
+}   
+
+
         </style>
 </head>
 <body>
 <main>
 
 <section  class="container main-container py-4 my-5">
-    <div class="avatar-container">
+<form method="post">
+    <div class="avatar-container information">
         <div class="avatar">
-            <img src="<?php echo $_SESSION["userSession"]["Image"];?>" alt="avatar" class="img-fluid avatar-img">
-            <a><img src="images/image-hover.png" alt="image-hover-icon" class="image-hover-icon"></a>
+            <label for="image-input">
+            <img src="<?php echo $_SESSION["userSession"]["Image"];?>" alt="avatar" class="img-fluid avatar-img ">
+            <input id="image-input" type="file" accept="image/png, image/jpg, image/gif, image/jpeg" name="image-input"/> <a><img src='images/image-hover.png' alt='image-hover-icon' class='image-hover-icon'></a>
+            </label>
         </div>
         <div class="avatar-buttons">
-            <button>Zmień avatar</button>
-            <button>Usuń avatar</button>
+            <input type="submit" class="btn" name="edit-image" value="Zmień avatar"/>
+            <input type="submit" class="btn " name="delete-image" value="Usuń avatar" />
         </div>
+        
     </div>
+    </form>
     <div class="informations-container mb-5">
+
         <form method="post">
         <div class="information">
             <div class="information-name">
@@ -74,10 +98,13 @@
                 <div class="information-email">
                     <input type="email" class="form-control bg-dark text-light border-0" style="background-color: #111111 !important;" rows="1" maxlength="25" minlength="1" id="email-status" name="email" value="<?php echo $_SESSION["userSession"]["email"];?>">
                 </div>
-                <input type="submit" value="Edytuj" class="btn btn-secondary" name="edytuj_dane">
+                
+                <input type="submit" value="Edytuj" class="btn btn-secondary my-3" name="edytuj_dane"><br>
+                <a href="profil.php"><input class="btn btn-primary" value="Wróć do profilu" type="button"></a>
             </div>
         </div>
         </form>
+
     </div>
 
 <?php
