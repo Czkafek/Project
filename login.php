@@ -1,6 +1,7 @@
 <?php 
     session_start();
     include_once "header.html";
+    if (isset($_POST['submit'])){header("Refresh:0");}
     if (!empty($_SESSION['userSession'])){
         header("location: profil.php");
     };
@@ -47,7 +48,8 @@
                 $mail_name = $_POST['mail'];
                 $password = $_POST['password'];
 
-                $query = "SELECT username,email FROM user_db WHERE (username='username' OR email='$mail_name') AND (password='$password')";
+                $query = "SELECT username,email,pronoun,title,Image FROM user_db WHERE (username='$mail_name' OR email='$mail_name') AND (password='$password')";
+                //echo $query;
                 $result = $conn->query($query);
                 //echo "UU";
                 if($result->num_rows == 1) {

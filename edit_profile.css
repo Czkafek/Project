@@ -157,18 +157,18 @@ body {
     row-gap: 5%;
     justify-content: center;
 }
-.avatar-buttons button {
+.avatar-buttons button input {
     background-color: #151515;
     border: none;
     padding: 0.7vw 2vw 0.7vw 2vw;
     text-wrap: nowrap;
 }
-.avatar-buttons button:nth-child(1) {
+.avatar-buttons input:nth-child(1) {
     background-color: #151515;
     color: #f8f8f8;
     font-weight: 600;
 }
-.avatar-buttons button:nth-child(2) {
+.avatar-buttons input:nth-child(2) {
     background-color: #eb8259;
     color: #2d1c07;
     font-weight: 700;

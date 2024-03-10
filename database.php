@@ -9,12 +9,11 @@ $db_server = "localhost";
     catch(mysqli_sql_exception){
             echo "Could not connect!";
         }
-    
 
     function get_news($number){
         $news = $number;
         $news_k = $news+1;
-        global $conn;
+        global $conn;  
         $query = "SELECT * FROM `News` ORDER BY `DateTime` DESC LIMIT $news,$news_k ;";
         $result = mysqli_query($conn,$query);
         $row = mysqli_fetch_assoc($result);
