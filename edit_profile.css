@@ -3,7 +3,7 @@
 
 
 @media (max-width: 576px) {
-    .buttons button {
+    .buttons input {
         font-size: 1rem;
         border-radius: 8px;
     }
@@ -20,7 +20,7 @@
     .information-email p {
         font-size: 3.2vw;
     }
-    .information-status button {
+    .information-status input {
         font-size: 3.2vw;
         border-radius: 5px;
     }
@@ -28,7 +28,7 @@
 
 
 @media (min-width: 576px) and (max-width: 768px) {
-    .buttons button {
+    .buttons input {
         font-size: 1rem;
         border-radius: 11px;
     }
@@ -45,7 +45,7 @@
     .information-email p {
         font-size: 2.8vw;
     }
-    .information-status button {
+    .information-status input {
         font-size: 2.8vw;
         border-radius: 5px;
     }
@@ -53,7 +53,7 @@
 
 
 @media (min-width: 768px) and (max-width: 992px) {
-    .buttons button {
+    .buttons input {
         font-size: 2vw;
         border-radius: 11px;
     }
@@ -70,7 +70,7 @@
     .information-email p {
         font-size: 2.2vw;
     }
-    .information-status button {
+    .information-status input {
         font-size: 2.2vw;
         border-radius: 8px;
     }
@@ -78,7 +78,7 @@
 
 
 @media (min-width: 992px) and (max-width: 1200px) {
-    .buttons button {
+    .buttons input {
         font-size: 1.7vw;
         border-radius: 13px;
     }
@@ -95,7 +95,7 @@
     .information-email p {
         font-size: 1.7vw;
     }
-    .information-status button {
+    .information-status input {
         font-size: 1.7vw;
         border-radius: 8px;
     }
@@ -103,7 +103,7 @@
 
 
 @media (min-width: 1200px) and (max-width: 1400px) {
-    .buttons button {
+    .buttons input {
         font-size: 1.7vw;
         border-radius: 13px;
     }
@@ -120,7 +120,7 @@
     .information-email p {
         font-size: 1.2vw;
     }
-    .information-status button {
+    .information-status input {
         font-size: 1.5vw;
         border-radius: 8px;
     }
@@ -128,7 +128,7 @@
 
 
 @media (min-width: 1400px) and (max-width: 1480px) {
-    .buttons button {
+    .buttons input {
         font-size: 1.7vw;
         border-radius: 15px;
     }
@@ -145,7 +145,7 @@
     .information-email p {
         font-size: 1.2vw;
     }
-    .information-status button {
+    .information-status input {
         font-size: 1.5vw;
         border-radius: 12px;
     }
@@ -153,7 +153,7 @@
 
 
 @media (min-width: 1480px) {
-    .buttons button {
+    .buttons input {
         font-size: 1.5vw;
         border-radius: 15px;
     }
@@ -170,7 +170,7 @@
     .information-email p {
         font-size: 1.2vw;
     }
-    .information-status button {
+    .information-status input {
         font-size: 1.5vw;
         border-radius: 12px;
     }
@@ -190,7 +190,11 @@ main {
 }
 .main-container {
     background-color: #1E1E1E;
-    padding-bottom: 10vw;
+    margin-top: 5rem;
+    padding: 3rem 0rem 0rem 0rem;
+}
+.main-container form {
+    padding-top: 3rem;
 }
 .avatar-container {
     display: flex;
@@ -232,23 +236,24 @@ main {
     row-gap: 5%;
     justify-content: center;
 }
-.buttons button {
+.buttons input {
     border: none;
     padding: 0.5vw 2vw 0.5vw 2vw;
     text-wrap: nowrap;
     -webkit-filter: brightness(100%);
 }
-.buttons button:nth-child(1) {
+.buttons input:nth-child(1) {
     background-color: #151515;
     color: #f8f8f8;
     font-weight: 600;
 }
-.buttons button:nth-child(2) {
+.buttons input:nth-child(2) {
     background-color: #eb8259;
     color: #2d1c07;
     font-weight: 700;
 }
-.buttons button:hover {
+.buttons input:hover,
+.zmiany-buttons input:hover {
     -webkit-filter: brightness(80%);
     -webkit-transition: all 0.15s ease;
     -moz-transition: all 0.15s ease;
@@ -290,7 +295,7 @@ main {
     padding: 0.5vw 1vw 0.5vw 1vw;
     width: 100%;
 }
-.information-status button {
+.information-status input {
     margin-top: 0.5vw;
     background-color: #555555;
     border: none;
@@ -298,7 +303,7 @@ main {
     padding: 0.4vw 1.5vw 0.4vw 1.5vw;
     transition: opacity 0.15s;
 }
-.information-status button:hover {
+.information-status input:hover {
     opacity: 0.7;
 }
 #email-status {
@@ -325,12 +330,56 @@ main {
     display: flex;
     flex-direction: row;
     column-gap: 1vw;
+    padding-bottom: 4rem;
 }
-#newsletter-buttons button:nth-child(1) {
+#newsletter-buttons input {
     flex: 1;
 }
-#newsletter-buttons button:nth-child(2) {
+
+
+
+.zmiany-container {
+    background-color: #0E0E0E;
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+    padding: 1rem 0rem 1rem 0rem;
+}
+.zmiany-text {
+    display: flex;
+    justify-content: right;
+    align-items: center;
     flex: 1;
+    font-size: 2rem;
+    color: #f8f8f8;
+    font-weight: 500;
+}
+.zmiany-text p {
+    margin: 0px;
+    padding: 0px;
+}
+.zmiany-buttons {
+    flex: 1;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    column-gap: 2rem;
+}
+.zmiany-buttons input{
+    font-size: 1vw;
+    padding: 0.5vw 2vw 0.5vw 2vw;
+    border: none;
+    border-radius: 12px;
+    font-weight: 500;
+}
+.zmiany-buttons input:nth-child(1) {
+    background-color: #111111;
+    color: #f8f8f8;
+}
+.zmiany-buttons input:nth-child(2) {
+    background-color: #1E1E1E;
+    color: #8AC281;
 }
 /*
 

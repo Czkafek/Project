@@ -46,72 +46,83 @@
 
     <main>
 
-        <section  class="container main-container pt-4 mt-5">
-            <div class="avatar-container">
-                <div class="avatar">
-                    <img src="images/avatar.jpg" alt="avatar" class="img-fluid avatar-img">
-                    <a><img src="images/image-hover.png" alt="image-hover-icon" class="image-hover-icon"></a>
-                </div>
-                <div class="buttons">
-                    <button>Zmień avatar</button>
-                    <button>Usuń avatar</button>
-                </div>
-            </div>
-            <div class="informations-container">
-                <div class="information">
-                    <div class="information-name">
-                        Nazwa Użytkownika
-                    </div>
-                    <div class="information-status">
-                        <textarea rows="1" maxlength="25" minlength="1">Username</textarea>
-                    </div>
-                    </div>
-                <div class="information">
-                    <div class="information-name">
-                        Zaimki
-                    </div>
-                    <div class="information-status">
-                        <textarea rows="1" maxlength="25" minlength="1" placeholder="Dodaj swoje zaimki"></textarea>
-                    </div>
-                </div>
-                <div class="information">
-                    <div class="information-name">
-                        Twój tytuł
-                    </div>
-                    <div class="information-status">
-                        <textarea rows="1" maxlength="25" minlength="1" placeholder="Dodaj swój tytuł">Senior front-end developer</textarea>
-                    </div>
-                </div>
-                <div class="information">
-                    <div class="information-name">
-                        Email
-                    </div>
-                    <div class="information-status">
-                        <div class="information-email">
-                            <textarea rows="1" maxlength="25" minlength="1" id="email-status">****************@gmail.com</textarea>
-                            <p>Pokaż</p>
-                        </div>
-                        <button>Edytuj</button>
-                    </div>
-                </div>
-                <div class="information">
-                    <div class="information-name">
-                        <p>Hasło</p>
+        <section  class="container main-container pt-0">
+            <form action="">
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <img src="images/avatar.jpg" alt="avatar" class="img-fluid avatar-img">
+                        <a><img src="images/image-hover.png" alt="image-hover-icon" class="image-hover-icon"></a>
                     </div>
                     <div class="buttons">
-                        <button>Zmień hasło</button>
+                        <input type="button" value="Zmień avatar">
+                        <input type="button" value="Usuń avatar">
                     </div>
                 </div>
-                <div class="information">
-                    <div class="information-name">
-                        <p>Newsletter</p>
+                <div class="informations-container">
+                    <div class="information">
+                        <div class="information-name">
+                            Nazwa Użytkownika
+                        </div>
+                        <div class="information-status">
+                            <textarea rows="1" maxlength="25" minlength="1">Username</textarea>
+                        </div>
+                        </div>
+                    <div class="information">   
+                        <div class="information-name">
+                            Zaimki
+                        </div>
+                        <div class="information-status">
+                            <textarea rows="1" maxlength="25" minlength="1" placeholder="Dodaj swoje zaimki"></textarea>
+                        </div>
                     </div>
-                    <div class="buttons" id="newsletter-buttons">
-                        <button>Aktywuj</button>
-                        <button>Dezaktywuj</button>
+                    <div class="information">
+                        <div class="information-name">
+                            Twój tytuł
+                        </div>
+                        <div class="information-status">
+                            <textarea rows="1" maxlength="25" minlength="1" placeholder="Dodaj swój tytuł">Senior front-end developer</textarea>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="information-name">
+                            Email
+                        </div>
+                        <div class="information-status">
+                            <div class="information-email">
+                                <textarea rows="1" maxlength="25" minlength="1" id="email-status">****************@gmail.com</textarea>
+                                <p>Pokaż</p>
+                            </div>
+                            <input type="button" value="Edytuj">
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="information-name">
+                            <p>Hasło</p>
+                        </div>
+                        <div class="buttons">
+                            <input type="button" value="Zmień hasło">
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="information-name">
+                            <p>Newsletter</p>
+                        </div>
+                        <div class="buttons" id="newsletter-buttons">
+                            <input type="button" value="Aktywuj">
+                            <input type="button" value="Deyzaktywuj">
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="zmiany-container">
+                    <div class="zmiany-text">
+                        <p>Masz niezapisane zmiany</p>
+                    </div>
+                    <div class="zmiany-buttons">
+                        <input type="submit" value="Resetuj">
+                        <input type="submit" value="Zapisz zmiany">
+                    </div>
+                </div>
+            </form>
         </section>
 
     </main>
