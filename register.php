@@ -23,18 +23,18 @@ include_once "header.html";
         <form class="text-light" method="post">
             <div class="form-group col-lg-12 m-3">
                 <label>Username</label>
-                <input type="label" name="username" class="form-control" id="" value="" required minlength="5" maxlength="20">
+                <input type="label" name="username" class="form-control bg-dark text-light" id="" value="" required minlength="5" maxlength="20">
             </div>
 
             <div class="form-group col-lg-6 m-3">
                 <label>Password</label>
-                <input type="password" name="password" class="form-control" id="" value="" required minlength="5" maxlength="20">
+                <input type="password" name="password" class="form-control bg-dark text-light" id="" value="" required minlength="5" maxlength="20">
             </div>
 
 
             <div class="form-group col-lg-6 m-3">
                 <label>Email Address</label>
-                <input type="email" name="email" class="form-control" id="" value="" required>
+                <input type="email" name="email" class="form-control bg-dark text-light" id="" value="" required>
             </div>
        
 
