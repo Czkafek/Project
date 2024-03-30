@@ -3,7 +3,6 @@
     include ('header.html');
     //if (isset($_POST['edytuj_dane'])){header("Refresh:0");}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,70 +44,111 @@ label{
         </style>
 </head>
 <body>
-<main>
 
-<section  class="container main-container py-4 my-5">
-<form method="post">
-    <div class="avatar-container information">
-        <div class="avatar">
-            <label for="image-input">
-            <img src="<?php echo $_SESSION["userSession"]["Image"];?>" alt="avatar" class="img-fluid avatar-img ">
-            <input id="image-input" type="file" accept="image/png, image/jpg, image/gif, image/jpeg" name="image-input"/> <a><img src='images/image-hover.png' alt='image-hover-icon' class='image-hover-icon'></a>
-            </label>
-        </div>
-        <div class="avatar-buttons">
-            <input type="submit" class="btn" name="edit-image" value="Zmień avatar"/>
-            <input type="submit" class="btn " name="delete-image" value="Usuń avatar" />
-        </div>
-        
-    </div>
-    </form>
-    <div class="informations-container mb-5">
+    <!-- <section class="background"></section> -->
 
-        <form method="post">
-        <div class="information">
-            <div class="information-name">
-                Nazwa Użytkownika
-            </div>
-            <div class="information-status">
-            <input type="text" class="form-control bg-dark text-light border-0" style="background-color: #111111 !important;" rows="1" maxlength="25" minlength="1" id="email-status" name="username" value="<?php echo $_SESSION["userSession"]["username"];?>">
-            </div>
-            </div>
-        <div class="information">
-            <div class="information-name">
-                Zaimek
-            </div>
-            <div class="information-status">
-            <input type="text" class="form-control bg-dark text-light border-0" style="background-color: #111111 !important;" rows="1" maxlength="25" minlength="1" id="email-status" name="pronoun" value="<?php echo $_SESSION["userSession"]["pronoun"];?>">
-            </div>
-        </div>
-        <div class="information">
-            <div class="information-name">
-                Twój tytuł
-            </div>
-            <div class="information-status">
-            <input type="text" class="form-control bg-dark text-light border-0" style="background-color: #111111 !important;" rows="1" maxlength="25" minlength="1" id="email-status" name="title" value="<?php echo $_SESSION["userSession"]["title"];?>">
-            </div>
-        </div>
-        <div class="information">
-            <div class="information-name">
-                Email
-            </div>
-            <div class="information-status">
-                <div class="information-email">
-                    <input type="email" class="form-control bg-dark text-light border-0" style="background-color: #111111 !important;" rows="1" maxlength="25" minlength="1" id="email-status" name="email" value="<?php echo $_SESSION["userSession"]["email"];?>">
+    <main>
+        <!-- <section class="container avatar-delete pt-0"> -->
+
+        </section>
+        <section  class="container main-container pt-0">
+            <form action="" method="post">
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <label for="image-input">
+                        <img src="<?php echo $_SESSION["userSession"]["Image"];?>" alt="avatar" class="img-fluid avatar-img">
+                        <input id="image-input" type="file" accept="image/png, image/jpg, image/gif, image/jpeg" name="image-input"/>
+                        <a><img src="images/image-hover.png" alt="image-hover-icon" class="image-hover-icon"></a>
+                        </label>
+                    </div>
+                    <div class="buttons">
+                        <input type="submit" name="edit-image" value="Zmień avatar">
+                        <input type="submit" name="delete-image" value="Usuń avatar">
+                    </div>
                 </div>
-                
-                <input type="submit" value="Edytuj" class="btn btn-secondary my-3" name="edytuj_dane"><br>
-                <a href="profil.php"><input class="btn btn-primary" value="Wróć do profilu" type="button"></a>
-            </div>
-        </div>
-        </form>
+                <div class="informations-container">
+                    <div class="information">
+                        <div class="information-name">
+                            Nazwa Użytkownika
+                        </div>
+                        <div class="information-status">
+                        <input type="text" class="form-control bg-dark text-light border-0" style="background-color: #111111 !important;" rows="1" maxlength="25" minlength="1" id="email-status" name="username" value="<?php echo $_SESSION["userSession"]["username"];?>">
+                        </div>
+                        </div>
+                    <div class="information">   
+                        <div class="information-name">
+                            Zaimki
+                        </div>
+                        <div class="information-status">
+                        <input type="text" class="form-control bg-dark text-light border-0" style="background-color: #111111 !important;" rows="1" maxlength="25" minlength="1" id="email-status" name="pronoun" value="<?php echo $_SESSION["userSession"]["pronoun"];?>">
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="information-name">
+                            Twój tytuł
+                        </div>
+                        <div class="information-status">
+                        <input type="text" class="form-control bg-dark text-light border-0" style="background-color: #111111 !important;" rows="1" maxlength="25" minlength="1" id="email-status" name="title" value="<?php echo $_SESSION["userSession"]["title"];?>">
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="information-name">
+                            Email
+                        </div>
+                        <div class="information-status">
+                            <div class="information-email">
+                            <input type="email" class="form-control bg-dark text-light border-0" style="background-color: #111111 !important;" rows="1" maxlength="25" minlength="1" id="email-status" name="email" value="<?php echo $_SESSION["userSession"]["email"];?>">
+                            </div>
+                            <input type="submit" value="Edytuj">
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="information-name">
+                            <p>Hasło</p>
+                        </div>
+                        <div class="buttons">
+                            <input type="button" value="Zmień hasło">
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="information-name">
+                            <p>Newsletter</p>
+                        </div>
+                        <div class="buttons" id="newsletter-buttons">
+                            <input type="submit" value="Aktywuj" name="active_news">
+                            <input type="submit" value="Dezaaktywuj" name="notctive_news">
+                        </div>
+                    </div>
+                </div>
+                <div class="zmiany-container">
+                    <div class="zmiany-text">
+                        <p>Masz niezapisane zmiany</p>
+                    </div>
+                    <div class="zmiany-buttons">
+                        <input type="submit" value="Resetuj">
+                        <input type="submit" value="Zapisz zmiany">
+                    </div>
+                </div>
+            </form>
+        </section>
 
-    </div>
+    </main>
 
-<?php
+
+    <?php
 include('database.php');
+
+if (isset($_POST['active_news'])){
+    echo "<p class='text-light'> UWU </p>";
+    unset($_POST['active_news']);
+    $SQL = "SELECT * FROM `Newsletter` WHERE mail='".$_SESSION['userSession']['email']."'";
+    echo $SQL;
+}
+
+
+
+
+
 
 if (isset($_POST["edytuj_dane"])){
     if ($_POST['username'] != $_SESSION['userSession']['username']){
@@ -137,9 +177,9 @@ if (isset($_POST["edytuj_dane"])){
 
 
 ?>
-</section>
 
-</main>
+
+
 </body>
 </html>
 
