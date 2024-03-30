@@ -7,10 +7,10 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="edit_profile.css">
+    <script src="edit_profile.js"></script>
 
 </head>
 <body>
-
 
     <nav>
         <div class="container-fluid">
@@ -45,9 +45,33 @@
     <section class="background"></section>
 
     <main>
-        <section class="container avatar-delete pt-0">
-
+        <section class="container email-change pt-0">
+            <p>Zmiana adresu email</p>
+            <p>Aby zmienić adres email na nowy, musisz obecny, <span>przykładowy.email@gmail.com</span> zweryfikować</p>
+            <form action="">
+                <div class="ver-code">
+                    <input type="number" id="number">
+                    <input type="number" id="number" disabled>
+                    <input type="number" id="number" disabled>
+                    <input type="number" id="number" disabled>
+                    <input type="number" id="number" disabled>
+                </div>
+                <div class="buttons">
+                    <input type="submit" value="Sprawdź" id="button">
+                    <input type="submit" value="Wyślij ponownie">
+                    <input type="submit" value="Anuluj">
+                </div>
+            </form>
         </section>
+        <!-- <section class="container avatar-delete pt-0">
+            <p>Czy na pewno chcesz usunąć swój avatar?</p>
+            <div class="buttons">
+                <form action="">
+                    <input type="submit" value="Usuń awatar">
+                    <input type="submit" value="Wróć">
+                </form>
+            </div>
+        </section>-->
         <section  class="container main-container pt-0">
             <form action="" method="post">
                 <div class="avatar-container">

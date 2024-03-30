@@ -419,23 +419,122 @@ main {
 
 .background {
     background-color: #0E0E0E;
-    width: 100%;
-    height: 100%;
     z-index: 50;
     position: fixed;
     opacity: 0.5;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
 }
 
 
 
 
-.avatar-delete {
+.avatar-delete,
+.email-change {
     background-color: #1E1E1E;
     position: fixed;
     left: 50%;
     transform: translate(-50%, 0);
     top: 30%;
-    width: 500px;
-    height: 250px;
+    z-index: 100;
+    width: 40vw;
+    height: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    color: #F8F8F8;
+}
+
+
+.avatar-delete p,
+.email-change p {
+    color: #f8f8f8;
+    font-size: 2rem;
+    font-weight: 600;
+    pointer-events: none;
+}
+.avatar-delete .buttons input:nth-child(1){
+    background-color: #341010;
+}
+.avatar-delete .buttons input:nth-child(2){
+    background-color: #555555;
+    color: #F8F8F8;
+    font-weight: 500;
+}
+
+
+
+nav {
     z-index: 100;
 }
+
+
+
+.email-change {
+    height: 20vw;
+}
+
+.email-change p:nth-child(2) {
+    font-size: 1.3rem;
+    color:#9D9D9D;
+    text-align: center;
+}
+span {
+    font-weight: 700;
+}
+
+.ver-code {
+    display: flex;
+    justify-content: center;
+    column-gap: 0.5vw;
+}
+.ver-code input {
+    font-size: 3rem;
+    width: 3.8rem;
+    height: 5rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: #ebebeb;
+    color: #010101;
+    cursor: pointer;
+}
+
+.email-change .buttons{
+    flex-direction: row;
+    column-gap: 1vw;
+}
+.email-change form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 1vw;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+.email-change .buttons input:nth-child(1) {
+    background-color: #eb8259;
+    color: #2d1c07;
+    font-weight: 700;
+}
+.email-change .buttons input:nth-child(2) {
+    background-color:#151515;
+    color: #f8f8f8;
+    font-weight: 600;
+}
+.email-change .buttons input:nth-child(3) {
+    background-color:#555555;
+    color: #f8f8f8;
+    font-weight: 600;
+}
+
