@@ -12,23 +12,25 @@ include "header.html";
 <body>
     <div class="container-fluid text-light text-center">
         <div class="row">
-        <div class="col-3">
+        <div class="col-12 col-md-3">
             UWU
         </div>
+        <div class="col-12 d-md-none d-block">COS</div>
+
 
         <div class="col-12 col-md-6">
-            <div class="mx-auto my-4">
+            <div class="mx-auto my-4 py-3">
                 <input type="text" placeholder="SEARCH" class="w-75 bg-dark rounded text-light">
-                <input type="submit">
+                <input type="image" src="images/search_5186446.png" style="width: 4%;">
             </div>
             <div class="card-group">
-                <div class="card m-3 rounded">
-                    <div class="card-body">
+                <div class="card m-3 rounded text-white">
+                    <div class="card-body"> 
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
-                    <div class="card-footer">
-                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    <div class="card-footer text-white">
+                    <small class="text-body-secondary text-white" style="color:aliceblue;">Last updated 3 mins ago</small>
                     </div>
                 </div>
                 <div class="card m-3 rounded">
@@ -56,7 +58,7 @@ include "header.html";
         -->
 
         </div>
-        <div class="col-3">UWU</div>
+        <div class="col-3 d-md-block d-none">UWU</div>
         </div>
     </div>
 </body>
