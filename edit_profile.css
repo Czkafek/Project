@@ -4,11 +4,12 @@
 
 @media (max-width: 576px) {
     .buttons input {
-        font-size: 1rem;
+        font-size: 1.3rem;
         border-radius: 8px;
     }
     .information-status textarea,
-    .zmiany-text {
+    .zmiany-text,
+    .new-email input {
         font-size: 3.5vw;
         border-radius: 8px;
     }
@@ -29,16 +30,32 @@
         padding: 1.5vw 3vw 1.5vw 3vw;
         font-size: 3vw;
     }
+    .avatar-delete,
+    .email-change {
+        width: 100%;
+        height: 40vw;
+    }
+    .email-change-2 {
+        height: 80vw;
+    }
+    .email-change p:nth-child(2) {
+        font-size: 1.3rem;
+    }
+    .avatar-delete p,
+    .email-change p {
+        font-size: 2rem;
+    }
 }
 
 
 @media (min-width: 576px) and (max-width: 768px) {
     .buttons input {
-        font-size: 1rem;
+        font-size: 1.2rem;
         border-radius: 11px;
     }
     .information-status textarea,
-    .zmiany-text {
+    .zmiany-text,
+    .new-email input {
         font-size: 3vw;
         border-radius: 5px;
     }
@@ -58,6 +75,22 @@
     .zmiany-buttons input{
         padding: 0.5vw 2vw 0.5vw 2vw;
     }
+    .avatar-delete,
+    .email-change {
+        width: 80%;
+        height: 30vw;
+    }
+    .email-change-2 {
+        height: 60vw;
+    }
+    .email-change p:nth-child(2) {
+        font-size: 1.3rem;
+    }
+    .avatar-delete p,
+    .email-change p {
+        font-size: 2rem;
+    }
+    
 }
 
 
@@ -67,7 +100,8 @@
         border-radius: 11px;
     }
     .information-status textarea,
-    .zmiany-text {
+    .zmiany-text,
+    .new-email input {
         font-size: 2.5vw;
         border-radius: 5px;
     }
@@ -87,6 +121,21 @@
     .zmiany-buttons input{
         padding: 0.5vw 2vw 0.5vw 2vw;
     }
+    .avatar-delete,
+    .email-change {
+        width: 80%;
+        height: 30vw;
+    }
+    .email-change-2 {
+        height: 40vw;
+    }
+    .email-change p:nth-child(2) {
+        font-size: 1.3rem;
+    }
+    .avatar-delete p,
+    .email-change p {
+        font-size: 2rem;
+    }
 }
 
 
@@ -96,7 +145,8 @@
         border-radius: 13px;
     }
     .information-status textarea,
-    .zmiany-text {
+    .zmiany-text,
+    .new-email input {
         font-size: 2vw;
         border-radius: 5px;
     }
@@ -116,6 +166,21 @@
     .zmiany-buttons input{
         padding: 0.5vw 2vw 0.5vw 2vw;
     }
+    .avatar-delete,
+    .email-change {
+        width: 80%;
+        height: 25vw;
+    }
+    .email-change-2 {
+        height: 30vw;
+    }
+    .email-change p:nth-child(2) {
+        font-size: 1.5rem;
+    }
+    .avatar-delete p,
+    .email-change p {
+        font-size: 2rem;
+    }
 }
 
 
@@ -125,7 +190,8 @@
         border-radius: 13px;
     }
     .information-status textarea,
-    .zmiany-text {
+    .zmiany-text,
+    .new-email input {
         font-size: 2vw;
         border-radius: 5px;
     }
@@ -145,6 +211,21 @@
     .zmiany-buttons input{
         padding: 0.5vw 2vw 0.5vw 2vw;
     }
+    .avatar-delete,
+    .email-change {
+        width: 80%;
+        height: 20vw;
+    }
+    .email-change-2 {
+        height: 30vw;
+    }
+    .email-change p:nth-child(2) {
+        font-size: 1.5rem;
+    }
+    .avatar-delete p,
+    .email-change p {
+        font-size: 2.5rem;
+    }
 }
 
 
@@ -154,7 +235,8 @@
         border-radius: 15px;
     }
     .information-status textarea,
-    .zmiany-text {
+    .zmiany-text,
+    .new-email input {
         font-size: 2vw;
         border-radius: 5px;
     }
@@ -177,6 +259,21 @@
     .zmiany-buttons input{
         padding: 0.5vw 2vw 0.5vw 2vw;
     }
+    .avatar-delete,
+    .email-change {
+        width: 60%;
+        height: 20vw;
+    }
+    .email-change-2 {
+        height: 25vw;
+    }
+    .email-change p:nth-child(2) {
+        font-size: 1.5rem;
+    }
+    .avatar-delete p,
+    .email-change p {
+        font-size: 2rem;
+    }
 }
 
 
@@ -186,7 +283,8 @@
         border-radius: 15px;
     }
     .information-status textarea,
-    .zmiany-text {
+    .zmiany-text,
+    .new-email input {
         font-size: 1.5vw;
         border-radius: 5px;
     }
@@ -208,6 +306,21 @@
     }
     .zmiany-buttons input{
         padding: 0.5vw 2vw 0.5vw 2vw;
+    }
+    .avatar-delete,
+    .email-change {
+        width: 60%;
+        height: 15vw;
+    }
+    .email-change-2 {
+        height: 25vw;
+    }
+    .email-change p:nth-child(2) {
+        font-size: 2rem;
+    }
+    .avatar-delete p,
+    .email-change p {
+        font-size: 3rem;
     }
 }
 
@@ -439,8 +552,6 @@ main {
     transform: translate(-50%, 0);
     top: 30%;
     z-index: 100;
-    width: 40vw;
-    height: 10vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -453,9 +564,10 @@ main {
 .avatar-delete p,
 .email-change p {
     color: #f8f8f8;
-    font-size: 2rem;
     font-weight: 600;
     pointer-events: none;
+    padding: 0px;
+    margin: 0px;
 }
 .avatar-delete .buttons input:nth-child(1){
     background-color: #341010;
@@ -474,12 +586,8 @@ nav {
 
 
 
-.email-change {
-    height: 20vw;
-}
 
 .email-change p:nth-child(2) {
-    font-size: 1.3rem;
     color:#9D9D9D;
     text-align: center;
 }
@@ -532,9 +640,34 @@ input::-webkit-inner-spin-button {
     color: #f8f8f8;
     font-weight: 600;
 }
-.email-change .buttons input:nth-child(3) {
-    background-color:#555555;
-    color: #f8f8f8;
-    font-weight: 600;
+
+.email-change .buttons input:nth-child(1):disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
 }
+
+.ver-code input:disabled{
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+
+.new-email {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+.new-email input {
+    background-color: #111111;
+    border: none;
+    color: #f8f8f8;
+    outline: none;
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    width: 60%;
+}
+
+
+
+
 

@@ -45,24 +45,44 @@
     <section class="background"></section>
 
     <main>
-        <section class="container email-change pt-0">
+        <section class="email-change pt-0">
+            <p>Wprowadź swój nowy email</p>
+            <form action="">
+                <div class="new-email">
+                    <input type="text" placeholder="Nowy email">
+                </div>
+                <div class="buttons">
+                    <input type="submit" value="Gotowe">
+                </div>
+            </form>
+        </section>
+        <!--<section class="email-change pt-0">
+            <p>Zmiana adresu email</p>
+            <p>Potwierdź email w swojej poczcie</p>
+            <form action="">
+                <div class="buttons">
+                    <input type="submit" value="Gotowe">
+                    <input type="submit" value="Wyślij ponownie">
+                </div>
+            </form>
+        </section>-->
+        <!--<section class="container email-change email-change-2 pt-0">
             <p>Zmiana adresu email</p>
             <p>Aby zmienić adres email na nowy, musisz obecny, <span>przykładowy.email@gmail.com</span> zweryfikować</p>
             <form action="">
                 <div class="ver-code">
-                    <input type="number" id="number">
-                    <input type="number" id="number" disabled>
-                    <input type="number" id="number" disabled>
-                    <input type="number" id="number" disabled>
-                    <input type="number" id="number" disabled>
+                    <input type="text" id="number" required oninput="handleInput(1, event)" onkeydown="handleBackspace(1, event)">
+                    <input type="text" id="number" required oninput="handleInput(2, event)" onkeydown="handleBackspace(2, event)" disabled>
+                    <input type="text" id="number" required oninput="handleInput(3, event)" onkeydown="handleBackspace(3, event)" disabled>
+                    <input type="text" id="number" required oninput="handleInput(4, event)" onkeydown="handleBackspace(4, event)" disabled>
+                    <input type="text" id="number" required oninput="handleInput(5, event)" onkeydown="handleBackspace(5, event)" disabled>
                 </div>
                 <div class="buttons">
-                    <input type="submit" value="Sprawdź" id="button">
-                    <input type="submit" value="Wyślij ponownie">
+                    <input type="submit" value="Sprawdź" class="verifyBtn" id="button" disabled>
                     <input type="submit" value="Anuluj">
                 </div>
             </form>
-        </section>
+        </section>-->
         <!-- <section class="container avatar-delete pt-0">
             <p>Czy na pewno chcesz usunąć swój avatar?</p>
             <div class="buttons">
